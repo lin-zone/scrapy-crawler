@@ -14,3 +14,4 @@
 * [爬取当当网 Top 500 本五星好评书籍](./crawler/dangdangtop500.py)
 * [爬取博客园文章并保存为markdown文件](./crawler/cnblogs.py)
 * [爬取东方财富网新闻并保存为markdown文件](./crawler/eastmoney.py)
+* [根据图书标签爬取豆瓣图书](./crawler/doubanbook.py)
