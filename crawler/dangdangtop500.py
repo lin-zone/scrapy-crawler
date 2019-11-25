@@ -2,7 +2,7 @@
 """
     爬取当当网 Top 500 本五星好评书籍
     链接: http://bang.dangdang.com/books/fivestars/01.00.00.00.00.00-recent30-0-0-1-1
-    Scrapy API: ItemLoader, DownloadMiddleware, Feed Export
+    Scrapy API: ItemLoader, DownloaderMiddleware, Feed Export
     设置 User-Agent
 """
 import scrapy
@@ -53,11 +53,13 @@ class Dangdangtop500Spider(scrapy.Spider):
             l.add_css('price_n', '.price_n::text')
             l.add_css('price_r', '.price_r::text')
             l.add_css('price_s', '.price_s::text')
-            yield l.load_item()
+            item = l.load_item()
+            print(item['title'])
+            yield item
 
 
 DOWNLOADER_MIDDLEWARES = {
-   'utils.middlewares.UserAgentDownloadMiddleware': 543,
+   'utils.middlewares.UserAgentMiddleware': 543,
 }
 settings = dict(
     LOG_ENABLED=False,

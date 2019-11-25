@@ -3,7 +3,7 @@
     根据图书标签爬取豆瓣图书
     eg: https://book.douban.com/tag/python?start=20&type=T
     所有标签: https://book.douban.com/tag/
-    Scrapy API: ItemLoader, DownloadMiddleware, Feed Export
+    Scrapy API: ItemLoader, DownloaderMiddleware, Feed Export
 """
 from itertools import count
 
@@ -79,7 +79,7 @@ class DoubanbookSpider(scrapy.Spider):
 
 
 DOWNLOADER_MIDDLEWARES = {
-   'utils.middlewares.UserAgentDownloadMiddleware': 543,
+   'utils.middlewares.UserAgentMiddleware': 543,
 }
 settings = dict(
     LOG_ENABLED=False,

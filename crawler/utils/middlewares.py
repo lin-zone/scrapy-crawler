@@ -1,7 +1,7 @@
 from fake_useragent import UserAgent
 
 
-class UserAgentDownloadMiddleware(object):
+class UserAgentMiddleware(object):
     ua = UserAgent()
 
     def process_request(self, request, spider):
