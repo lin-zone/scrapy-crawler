@@ -23,7 +23,7 @@ class FirefoxSetCookiesMiddleware(object):
         if not hasattr(spider, 'cookies'):
             options = webdriver.FirefoxOptions()
             options.add_argument('--headless')              # 启动无头模式
-            browser = webdriver.Firefox(options=options, service_log_path=None)
+            browser = webdriver.Firefox(options=options)
             # 通过主页的url获取cookies, 其他链接可能无法正确获取cookies
             result = urlparse(request.url)
             base_url = '{}://{}'.format(result.scheme, result.netloc)
