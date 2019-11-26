@@ -29,3 +29,4 @@
 ## Ajax加载
 
 * [输入关键词爬取头条新闻](./crawler/toutiao.py)
+* [爬取豌豆荚app信息](./crawler/wandoujia.py)
