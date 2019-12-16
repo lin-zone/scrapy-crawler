@@ -1,4 +1,14 @@
 # -*- coding: utf-8 -*-
+"""
+手机端请求:
+    1. 使用mitmproxy抓包获取boss直聘的url请求
+        https://www.zhipin.com/c101280100-p100109/?ka=position-100109
+        https://www.zhipin.com/wapi/zpgeek/mobile/jobs.json?page=3&city=101280100&query=Python
+    2. 需要设置cookies, 否则会返回错误信息 {"code":37,"message":"您的访问行为异常"}
+
+PC端请求
+    https://www.zhipin.com/c101280100/?query=python&page=3&ka=page-3
+"""
 import scrapy
 
 
